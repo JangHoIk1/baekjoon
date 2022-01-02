@@ -1,0 +1,37 @@
+from collections import Counter # Counter는 딕셔러리 형태로
+                                # 리스트 각 요소 개수를 보여줌
+import sys
+input=sys.stdin.readline # input의 시간 단축 가능
+N=int(input())
+array=[]
+sansul=0
+chabin=0
+for i in range(N):
+    array.append(int(input()))
+
+
+array.sort()
+
+sansul = sum(array)/N
+
+# Counter 함수를 쓰면 딕셔너리 형태로 저장
+# most_common()으로하면 리스트 형태의 튜플값으로 저장
+chabin = Counter(array).most_common()
+
+
+
+
+print("{:.0f}".format(sansul)) ## "{:.숫자f}.format(변수) 는 변수를 소수점
+                                #숫자까지 반올림후 출력(코딩 반올림은 6부터 올려짐)
+print(array[N//2])
+
+
+if N>1:
+    if chabin[0][1]==chabin[1][1]:
+        print(chabin[1][0])
+    else:
+        print(chabin[0][0])
+else:
+    print(chabin[0][0])
+    
+print(max(array)-min(array)) # max(변수)는  변수의 최댓값을 출력
