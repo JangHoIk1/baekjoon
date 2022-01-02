@@ -3,16 +3,16 @@ num=0
 index=0
 K= []
 
-for i in range(0,N,1):
+for i in range(0,N):
     num = int(input())
     K.append(num)
-print(K)
-for j in range(1,N,1):
+for j in range(1,N):
     for k in range(j,N,1):
-        if (K[j-1]>K[k]):
+        if (K[j-1]>K[k]): # 버블 정렬
             index=K[j-1]
             K[j-1]=K[k]
             K[k]=index
-                        
-print(K)
+for k in range(N):
+    print(K[k])
+
 
