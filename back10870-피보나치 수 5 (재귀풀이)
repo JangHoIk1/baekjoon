@@ -1,0 +1,28 @@
+def fibo(n): 
+    if(n == 0):
+        return 0
+    elif(n == 1):
+        return 1
+    else:
+        return fibo(n-2)+fibo(n-1)
+
+n = int(input())
+print(fibo(n))
+
+# if n==5 라면 5는 fibo(3)+fibo(4) 
+
+# fibo(3) -> fibo(1)+fibo(2)
+
+# fibo(1)은 n==1이므로 1
+# fibo(2)은 fibo(0)+fibo(1) => 1
+
+# 즉 fibo(3) => 1+1 => 2
+
+
+# fibo(4) -> fibo(2)+fibo(3)
+# fibo(4)는 1+2 이므로 3
+
+
+# fibo(5) 즉 5번째 피보나치 수는 2+3 이므로 5가 된다.
+
+
