@@ -1,0 +1,11 @@
+def factorial(x):
+    if x>1:
+        return x*factorial(x-1) # 5*fac(4) -> 5 * 4 * fac(3) .... 2*fac(1) // fac(1)은 1을 반환  즉, 5 * 4 * 3 * 2 * 1 이 된다
+    else:
+        return 1
+
+N = factorial(int(input())) N=5라고 하자
+
+print(N)
+
+        
