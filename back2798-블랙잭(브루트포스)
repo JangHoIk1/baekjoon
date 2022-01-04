@@ -1,0 +1,17 @@
+N,M = map(int,input().split())
+array = list(map(int,input().split()))
+array1=[]
+sum=0
+
+
+# 브루트포스 전체의 경우의 수를 모두 확인
+for i in range(len(array)):
+    for j in range(i+1,len(array)):
+        for k in range(j+1,len(array)):
+            sum = array[i]+array[j]+array[k]
+            if sum<=M: # 3개의 카드 합이 M보다 큰 경우는 제외
+                array1.append(sum) # array1 M보다 작거나 같은 카드 합을 배열에 모두 추가
+
+
+print(max(set(array1))) # 중복을 없애고 가장 큰 값(M보다 작거나 같은 값)을 출력
+        
