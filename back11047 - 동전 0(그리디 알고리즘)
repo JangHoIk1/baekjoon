@@ -1,0 +1,13 @@
+N,K = map(int,input().split())
+array=[]
+gasu=0
+num=0
+for i in range(N):
+    array.append(int(input())) # 문제 - 오름차순으로 숫자 입력
+
+for j in range(N-1,-1,-1): # N은 큰수부터 즉 리스트 인덱스 N-1부터 0까지
+    if K>=array[j]: # K보다 array 리스트의 값이 더 크면 나누어지지 않음
+        gasu = gasu+K//array[j] # 만약 나누어진다면 몫을 gasu에 저장
+        K = K%array[j] # 그리고 K는 나눈 리스트값의 나머지를 저장
+        
+print(gasu)
