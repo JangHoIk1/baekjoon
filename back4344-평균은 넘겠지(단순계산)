@@ -1,0 +1,28 @@
+import sys
+input = sys.stdin.readline
+
+C = int(input())
+N=0
+sum=0
+student=0
+array1=[]
+
+for i in range(C):
+
+    array1 = list(map(int,input().split()))
+
+    N = array1[0]
+    array1.pop(0)
+    for j in range(N):
+        sum += array1[j]
+
+    sum/=N
+    
+    for k in range(N):
+        if sum<array1[k]:
+            student+=1
+
+    student = student/N * 100
+    print("{:.3f}%".format(student))
+    sum=0
+    student=0
