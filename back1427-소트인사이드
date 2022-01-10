@@ -1,0 +1,17 @@
+N = int(input())
+jari=[]
+i=1
+while i>0:
+    if N<=0:
+        break
+
+    jari.append(N%10)
+    N= N//10
+
+
+
+jari.sort(reverse=True)
+
+for k in range(len(jari)):
+    print(jari[k],end="")
+
