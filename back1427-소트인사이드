@@ -1,17 +1,8 @@
-N = int(input())
-jari=[]
-i=1
-while i>0:
-    if N<=0:
-        break
-
-    jari.append(N%10)
-    N= N//10
-
-
-
-jari.sort(reverse=True)
-
-for k in range(len(jari)):
-    print(jari[k],end="")
+N = list(sys.stdin.readline().strip()) # 리스트로 
+#1842 입력시 -> N = ['1' , '8', '4', '2'] 
+N.sort() 
+# 오름차순 정렬 / N = ['1' , '2', '4', '8']
+# 내림차순 정렬 N.sort(reverse=True) -> N = ['8' , '4', '2', '1']
+for i in range(len(N)-1,-1,-1): 
+    print(N[i],end ='')
 
