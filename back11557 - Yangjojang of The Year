@@ -1,0 +1,13 @@
+T = int(input())
+
+for i in  range(T):
+    N = int(input())
+    univer=[]
+    sobi= []
+    for j in range(N):
+        univer.append(input().split())
+        sobi.append(int((univer[j][1])))
+
+    for k in range(len(sobi)):
+        if str(max(sobi)) in univer[k]:
+            print(univer[k][0])
