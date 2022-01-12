@@ -1,0 +1,25 @@
+array1 = list(input())
+
+front=0
+back=len(array1)-1
+num=0
+for i in range(100000):
+    if len(array1)%2==1:
+        if front==back:
+            num=1
+            break
+        elif array1[front] != array1[back]:   
+            break
+
+    else:
+        if array1[front] != array1[back]:   
+            break
+        else:
+            if front+1 == back :
+                num=1
+                break
+
+    front+=1
+    back-=1
+            
+print(num)
