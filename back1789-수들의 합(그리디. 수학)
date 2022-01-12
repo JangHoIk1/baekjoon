@@ -1,0 +1,13 @@
+s = int(input())
+sum=0
+k=1
+cnt=0
+for i in range(1000000):
+    if sum>s:
+        cnt-=1
+        break
+    sum+=k
+    k+=1
+    cnt+=1
+print(cnt)
+        
