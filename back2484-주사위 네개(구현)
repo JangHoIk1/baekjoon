@@ -1,0 +1,29 @@
+from collections import Counter
+
+N = int(input())
+array = [[] for _ in range(N)]
+chabin=0
+sum = []
+
+
+for i in range(1,N+1):
+    array[i-1] = list(map(int,input().split()))
+    chabin = Counter(array[i-1]).most_common()
+
+    if chabin[0][1]==4:
+        sum.append(50000+chabin[0][0]*5000)
+    elif chabin[0][1]==3:
+        sum.append(10000+chabin[0][0]*1000)
+    elif chabin[0][1]==2 and chabin[1][1]!=2:
+        sum.append(1000+chabin[0][0]*100)
+    elif chabin[0][1]==chabin[1][1]==2:
+        sum.append(2000+chabin[0][0]*500+chabin[1][0]*500)
+    else:
+        sum.append(max(array[i-1])*100)
+
+print(max(sum))
+    
+
+
+
+
