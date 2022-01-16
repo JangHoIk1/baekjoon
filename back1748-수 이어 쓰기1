@@ -1,0 +1,9 @@
+N = int(input())
+lenth_N = len(str(N))
+cnt = 0
+
+for i in range(lenth_N-1):
+    cnt += 9* 10**i*(i+1)
+cnt += (N-10**(lenth_N-1)+1) * lenth_N
+
+print(cnt)
