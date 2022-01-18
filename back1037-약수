@@ -1,0 +1,8 @@
+# 처음 약수의 개수가 주어지고
+# 두번째 약수들이 주어지면
+# 그 원래 값을 구하는 문제
+
+N = int(input())
+array = list(map(int,input().split()))
+print(min(array)*max(array))
+
