@@ -1,0 +1,17 @@
+import sys
+array=[]
+N=int(input())
+K=0
+sum=0
+j=0
+for i in range(N):
+    K = int(sys.stdin.readline())
+    if K !=0:
+        array.append(K) # K가 0이 아닐때만 array 리스트에 추가
+    else:
+        array.pop()  # 만약 K가 0이면 array 이면 가장 최근에 추가된 인덱스 제거
+        
+for j in array: # array에는 입력(및 0으로 인한 제거 계산)이 완료된 리스트임
+    sum+=j 
+
+print(sum)
