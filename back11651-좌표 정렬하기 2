@@ -1,0 +1,16 @@
+N= int(input())
+
+array = []
+
+for i in range(N):
+    array.append(list(map(int,input().split())))
+    
+
+array.sort(key = lambda x : (x[1],x[0])) # key에서 lambda를 이용해서
+                                         # x[1] 을 기준으로 sort하고
+                                         # x[0] 을 기준으로 다시 sort 한다
+
+
+for i,j in array:
+    print(i,j,sep=' ')
+
